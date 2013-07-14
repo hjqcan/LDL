@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LocalStoreModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="LocalStoreModelStoreContainer">
+          <EntitySet Name="LoginUserName" EntityType="LocalStoreModel.Store.LoginUserName" store:Type="Tables" />
+          <EntitySet Name="Parameter" EntityType="LocalStoreModel.Store.Parameter" store:Type="Tables" />
+          <EntitySet Name="UserSetting" EntityType="LocalStoreModel.Store.UserSetting" store:Type="Tables" />
+          <EntitySet Name="Version" EntityType="LocalStoreModel.Store.Version" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="LoginUserName">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LoginTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Parameter">
+          <Key>
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Type" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParentCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserSetting">
+          <Key>
+            <PropertyRef Name="Key" />
+          </Key>
+          <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Value" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Version">
+          <Key>
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Name="Type" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Version" Type="int" Nullable="false" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LocalStoreModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="LocalStoreEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LoginUserName" EntityType="LocalStoreModel.LoginUserName" />
+          <EntitySet Name="UserSetting" EntityType="LocalStoreModel.UserSetting" />
+          <EntitySet Name="Version" EntityType="LocalStoreModel.Version" />
+          <EntitySet Name="Parameter" EntityType="LocalStoreModel.Parameter" />
+        </EntityContainer>
+        <EntityType Name="LoginUserName">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LoginTime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserSetting">
+          <Key>
+            <PropertyRef Name="Key" />
+          </Key>
+          <Property Name="Key" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Value" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Version">
+          <Key>
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Type="String" Name="Type" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Version1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Parameter">
+          <Key>
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Type="String" Name="Type" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParentCode" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="OrderID" Nullable="false" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LocalStoreModelStoreContainer" CdmEntityContainer="LocalStoreEntities">
+          <EntitySetMapping Name="LoginUserName">
+            <EntityTypeMapping TypeName="LocalStoreModel.LoginUserName">
+              <MappingFragment StoreEntitySet="LoginUserName">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="LoginTime" ColumnName="LoginTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserSetting">
+            <EntityTypeMapping TypeName="LocalStoreModel.UserSetting">
+              <MappingFragment StoreEntitySet="UserSetting">
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Version">
+            <EntityTypeMapping TypeName="LocalStoreModel.Version">
+              <MappingFragment StoreEntitySet="Version">
+                <ScalarProperty Name="Version1" ColumnName="Version" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parameter">
+            <EntityTypeMapping TypeName="LocalStoreModel.Parameter">
+              <MappingFragment StoreEntitySet="Parameter">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="LocalStoreModel">
+        <EntityTypeShape EntityType="LocalStoreModel.LoginUserName" Width="1.5" PointX="0.75" PointY="0.75" Height="1.3658455403645831" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalStoreModel.UserSetting" Width="1.5" PointX="2.75" PointY="0.75" Height="1.3658455403645835" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalStoreModel.Version" Width="1.5" PointX="2.75" PointY="3.75" Height="1.3658455403645817" />
+        <EntityTypeShape EntityType="LocalStoreModel.Parameter" Width="1.5" PointX="5.375" PointY="0.75" Height="2.1050219726562496" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

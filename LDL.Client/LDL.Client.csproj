@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5230327-F906-4451-8262-5D638341D3AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LDL.Client</RootNamespace>
+    <AssemblyName>LDL.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>F:\Publish\LDL\Client\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>loadedtruck.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommonHelper.cs" />
+    <Compile Include="Common\ControlsHelper.cs" />
+    <Compile Include="Common\EnumClass.cs" />
+    <Compile Include="Common\FrequentlyUsedData.cs" />
+    <Compile Include="Common\Identity.cs" />
+    <Compile Include="Common\LibExtendHelper.cs" />
+    <Compile Include="Common\LocalStoreHelper.cs" />
+    <Compile Include="Common\WcfServiceHelper.cs" />
+    <Compile Include="EF\LocalStoreModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalStoreModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\LDLService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\FrmCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\FrmCustomers.Designer.cs">
+      <DependentUpon>FrmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\FrmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\FrmDepartment.Designer.cs">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\FrmSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\FrmSite.Designer.cs">
+      <DependentUpon>FrmSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\FrmDestination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\FrmDestination.Designer.cs">
+      <DependentUpon>FrmDestination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\FrmWaybillEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\FrmWaybillEdit.Designer.cs">
+      <DependentUpon>FrmWaybillEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockGoods.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockGoods.Designer.cs">
+      <DependentUpon>UCStockGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockGoodsProvide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockGoodsProvide.Designer.cs">
+      <DependentUpon>UCStockGoodsProvide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockGoodsRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockGoodsRegister.Designer.cs">
+      <DependentUpon>UCStockGoodsRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockWaybillRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockWaybillRegister.Designer.cs">
+      <DependentUpon>UCStockWaybillRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockWaybill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockWaybill.Designer.cs">
+      <DependentUpon>UCStockWaybill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockWaybillProvide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Stock\UCStockWaybillProvide.Designer.cs">
+      <DependentUpon>UCStockWaybillProvide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmCustomersEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmCustomersEdit.Designer.cs">
+      <DependentUpon>FrmCustomersEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmDepartmentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmDepartmentEdit.Designer.cs">
+      <DependentUpon>FrmDepartmentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmDestinationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmDestinationEdit.Designer.cs">
+      <DependentUpon>FrmDestinationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmEmployeeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmEmployeeEdit.Designer.cs">
+      <DependentUpon>FrmEmployeeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmFunctionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmFunctionEdit.Designer.cs">
+      <DependentUpon>FrmFunctionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmParameterEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmParameterEdit.Designer.cs">
+      <DependentUpon>FrmParameterEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmQuoteMainEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmQuoteMainEdit.Designer.cs">
+      <DependentUpon>FrmQuoteMainEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmRoleFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmRoleFunction.Designer.cs">
+      <DependentUpon>FrmRoleFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmSiteEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmSiteEdit.Designer.cs">
+      <DependentUpon>FrmSiteEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmUserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\FrmUserEdit.Designer.cs">
+      <DependentUpon>FrmUserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCCar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCCar.Designer.cs">
+      <DependentUpon>UCCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCCustomers.Designer.cs">
+      <DependentUpon>UCCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCDepartment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCDepartment.Designer.cs">
+      <DependentUpon>UCDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCEmployee.Designer.cs">
+      <DependentUpon>UCEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCFunction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCFunction.Designer.cs">
+      <DependentUpon>UCFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCParameter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCParameter.Designer.cs">
+      <DependentUpon>UCParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCQuoteMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCQuoteMain.Designer.cs">
+      <DependentUpon>UCQuoteMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCRole.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCRole.Designer.cs">
+      <DependentUpon>UCRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCSite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCSite.Designer.cs">
+      <DependentUpon>UCSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCUser.Designer.cs">
+      <DependentUpon>UCUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCUserLoginLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCUserLoginLog.Designer.cs">
+      <DependentUpon>UCUserLoginLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Toolbar.cs" />
+    <Compile Include="UserControls\Sys\UCDestination.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sys\UCDestination.Designer.cs">
+      <DependentUpon>UCDestination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Waybill\UCWaybillEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Waybill\UCWaybillEdit.Designer.cs">
+      <DependentUpon>UCWaybillEdit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\Common\FrmCustomers.resx">
+      <DependentUpon>FrmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Common\FrmDepartment.resx">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Common\FrmSite.resx">
+      <DependentUpon>FrmSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Common\FrmDestination.resx">
+      <DependentUpon>FrmDestination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Common\FrmWaybillEdit.resx">
+      <DependentUpon>FrmWaybillEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Stock\UCStockGoods.resx">
+      <DependentUpon>UCStockGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Stock\UCStockGoodsProvide.resx">
+      <DependentUpon>UCStockGoodsProvide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Stock\UCStockGoodsRegister.resx">
+      <DependentUpon>UCStockGoodsRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Stock\UCStockWaybillRegister.resx">
+      <DependentUpon>UCStockWaybillRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Stock\UCStockWaybill.resx">
+      <DependentUpon>UCStockWaybill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Stock\UCStockWaybillProvide.resx">
+      <DependentUpon>UCStockWaybillProvide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\FrmCustomersEdit.resx">
+      <DependentUpon>FrmCustomersEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\FrmDepartmentEdit.resx">
+      <DependentUpon>FrmDepartmentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\FrmDestinationEdit.resx">
+      <DependentUpon>FrmDestinationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\FrmEmployeeEdit.resx">
+      <DependentUpon>FrmEmployeeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\FrmFunctionEdit.resx">
+      <DependentUpon>FrmFunctionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\FrmParameterEdit.resx">
+      <DependentUpon>FrmParameterEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\FrmQuoteMainEdit.resx">
+      <DependentUpon>FrmQuoteMainEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\FrmRoleFunction.resx">
+      <DependentUpon>FrmRoleFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\FrmSiteEdit.resx">
+      <DependentUpon>FrmSiteEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\FrmUserEdit.resx">
+      <DependentUpon>FrmUserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCCar.resx">
+      <DependentUpon>UCCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCCustomers.resx">
+      <DependentUpon>UCCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCDepartment.resx">
+      <DependentUpon>UCDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCEmployee.resx">
+      <DependentUpon>UCEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCFunction.resx">
+      <DependentUpon>UCFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCParameter.resx">
+      <DependentUpon>UCParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCQuoteMain.resx">
+      <DependentUpon>UCQuoteMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCRole.resx">
+      <DependentUpon>UCRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCSite.resx">
+      <DependentUpon>UCSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCUser.resx">
+      <DependentUpon>UCUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCUserLoginLog.resx">
+      <DependentUpon>UCUserLoginLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sys\UCDestination.resx">
+      <DependentUpon>UCDestination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Waybill\UCWaybillEdit.resx">
+      <DependentUpon>UCWaybillEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="EF\LocalStoreModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LocalStoreModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\DataSources\LDL.Client.EF.LocalDBEntities.datasource" />
+    <None Include="Properties\DataSources\LDL.Client.EF.LocalStoreEntities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.CoCar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.CoCustomers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.CoDepartment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.CoDestination.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.CoDriver.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.CoEmployee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.CoSite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.QuoteExpression.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.QuoteMain.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.QuoteMainRelation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.StockGoods.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.StockGoodsProvide.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.StockGoodsRegister.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.StockWaybill.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.StockWaybillProvide.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.StockWaybillRegister.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.SysFunction1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.SysParameter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.SysParameterType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.SysRole.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.SysRoleFunction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.SysUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.SysUserFunction1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.SysUserLoginLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.WaybillGoods.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDL.Client.LDLService.WaybillInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LDLService\LDLWCFService.EF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LDLService\service.wsdl" />
+    <None Include="Service References\LDLService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LDLService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LDLService\System.Data.Objects.DataClasses1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LDLService\System.Data1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="loadedtruck.ico" />
+    <Content Include="LocalStore.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\State_Validation_Valid.png" />
+    <None Include="Resources\Action_Cancel.png" />
+    <None Include="Resources\Action_Save.png" />
+    <None Include="Resources\Action_Save_12x12.png" />
+    <None Include="Resources\Action_Copy_CellValue_32x32.png" />
+    <None Include="Resources\Action_Printing_Print_32x32.png" />
+    <None Include="Resources\ModelEditor_ModelMerge_32x32.png" />
+    <None Include="Resources\Action_Export_32x32.png" />
+    <None Include="Resources\Action_Save_32x32.png" />
+    <None Include="Resources\Action_Search_32x32.png" />
+    <None Include="Resources\Action_Delete_32x32.png" />
+    <None Include="Resources\Action_Edit_32x32.png" />
+    <None Include="Resources\Action_New_32x32.png" />
+    <None Include="Service References\LDLService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\LDLService\configuration.svcinfo" />
+    <None Include="Service References\LDLService\configuration91.svcinfo" />
+    <None Include="Resources\Action_Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LDL.Utility\LDL.Utility.csproj">
+      <Project>{D838EB7A-2C3F-4570-9E99-01FCFA565072}</Project>
+      <Name>LDL.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LDLService\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

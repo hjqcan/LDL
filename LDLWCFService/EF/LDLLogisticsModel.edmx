@@ -1,0 +1,1593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LDLLogisticsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="LDLLogisticsModelStoreContainer">
+          <EntitySet Name="CoCar" EntityType="LDLLogisticsModel.Store.CoCar" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CoCustomers" EntityType="LDLLogisticsModel.Store.CoCustomers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CoDepartment" EntityType="LDLLogisticsModel.Store.CoDepartment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CoDestination" EntityType="LDLLogisticsModel.Store.CoDestination" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CoDriver" EntityType="LDLLogisticsModel.Store.CoDriver" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CoEmployee" EntityType="LDLLogisticsModel.Store.CoEmployee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CoSite" EntityType="LDLLogisticsModel.Store.CoSite" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="QuoteExpression" EntityType="LDLLogisticsModel.Store.QuoteExpression" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="QuoteMain" EntityType="LDLLogisticsModel.Store.QuoteMain" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="QuoteMainRelation" EntityType="LDLLogisticsModel.Store.QuoteMainRelation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StockGoods" EntityType="LDLLogisticsModel.Store.StockGoods" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StockGoodsProvide" EntityType="LDLLogisticsModel.Store.StockGoodsProvide" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StockGoodsRegister" EntityType="LDLLogisticsModel.Store.StockGoodsRegister" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StockWaybill" EntityType="LDLLogisticsModel.Store.StockWaybill" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StockWaybillProvide" EntityType="LDLLogisticsModel.Store.StockWaybillProvide" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StockWaybillRegister" EntityType="LDLLogisticsModel.Store.StockWaybillRegister" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysFunction" EntityType="LDLLogisticsModel.Store.SysFunction" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysOperationLog" EntityType="LDLLogisticsModel.Store.SysOperationLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysParameter" EntityType="LDLLogisticsModel.Store.SysParameter" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysParameterType" EntityType="LDLLogisticsModel.Store.SysParameterType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysRole" EntityType="LDLLogisticsModel.Store.SysRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysRoleFunction" EntityType="LDLLogisticsModel.Store.SysRoleFunction" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysUser" EntityType="LDLLogisticsModel.Store.SysUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysUserFunction" EntityType="LDLLogisticsModel.Store.SysUserFunction" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysUserLoginLog" EntityType="LDLLogisticsModel.Store.SysUserLoginLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysVersion" EntityType="LDLLogisticsModel.Store.SysVersion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WaybillGoods" EntityType="LDLLogisticsModel.Store.WaybillGoods" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WaybillInfo" EntityType="LDLLogisticsModel.Store.WaybillInfo" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="CoCar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="LicenseNumber" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SiteCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Driver" Type="varchar" MaxLength="20" />
+          <Property Name="CarType" Type="varchar" MaxLength="20" />
+          <Property Name="OwnType" Type="varchar" MaxLength="50" />
+          <Property Name="OperationNO" Type="varchar" MaxLength="50" />
+          <Property Name="Remark" Type="varchar" MaxLength="200" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoCustomers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FullName" Type="varchar" MaxLength="255" />
+          <Property Name="QueryWork" Type="varchar" MaxLength="20" />
+          <Property Name="SiteID" Type="varchar" MaxLength="20" />
+          <Property Name="LinkMan1" Type="varchar" MaxLength="20" />
+          <Property Name="LinkMan2" Type="varchar" MaxLength="20" />
+          <Property Name="Tel1" Type="varchar" MaxLength="20" />
+          <Property Name="Tel2" Type="varchar" MaxLength="20" />
+          <Property Name="Phone1" Type="varchar" MaxLength="20" />
+          <Property Name="Phone2" Type="varchar" MaxLength="20" />
+          <Property Name="Fax" Type="varchar" MaxLength="20" />
+          <Property Name="QQ" Type="varchar" MaxLength="20" />
+          <Property Name="MSN" Type="varchar" MaxLength="50" />
+          <Property Name="Mail" Type="varchar" MaxLength="50" />
+          <Property Name="SendPlace" Type="varchar" MaxLength="255" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="SettlementType" Type="varchar" MaxLength="20" />
+          <Property Name="CustomersType" Type="varchar" MaxLength="20" />
+          <Property Name="ServiceEmployeeID" Type="int" />
+          <Property Name="ServiceEmployeeName" Type="varchar" MaxLength="20" />
+          <Property Name="PayeeName" Type="varchar" MaxLength="20" />
+          <Property Name="PayeePhone" Type="varchar" MaxLength="20" />
+          <Property Name="BankName" Type="varchar" MaxLength="50" />
+          <Property Name="BankAccount" Type="varchar" MaxLength="50" />
+          <Property Name="TransferNO" Type="varchar" MaxLength="50" />
+          <Property Name="IsTransfer" Type="bit" Nullable="false" />
+          <Property Name="IsSMS" Type="bit" Nullable="false" />
+          <Property Name="IsPrepaid" Type="bit" Nullable="false" />
+          <Property Name="IsSpecial" Type="bit" Nullable="false" />
+          <Property Name="Remark" Type="varchar" MaxLength="255" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoDepartment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="int" Nullable="false" />
+          <Property Name="DeptCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="DeptName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Remark" Type="varchar" MaxLength="512" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoDestination">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SiteID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoDriver">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="IDCard" Type="varchar" MaxLength="18" />
+          <Property Name="Sex" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="LicenseType" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="NativePlace" Type="varchar" MaxLength="20" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="200" />
+          <Property Name="Remark" Type="varchar" MaxLength="255" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoEmployee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="QueryWord" Type="varchar" MaxLength="20" />
+          <Property Name="DeptID" Type="int" Nullable="false" />
+          <Property Name="SiteID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Type" Type="varchar" MaxLength="50" />
+          <Property Name="Superior" Type="varchar" MaxLength="20" />
+          <Property Name="Phone" Type="varchar" MaxLength="20" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="BarPassword" Type="varchar" MaxLength="20" />
+          <Property Name="Remark" Type="varchar" MaxLength="512" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoSite">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ParentID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Currency" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SendPlace" Type="varchar" MaxLength="20" />
+          <Property Name="Province" Type="varchar" MaxLength="20" />
+          <Property Name="City" Type="varchar" MaxLength="20" />
+          <Property Name="Area" Type="varchar" MaxLength="20" />
+          <Property Name="AllowArrivalPay" Type="bit" Nullable="false" />
+          <Property Name="AllowCollection" Type="bit" Nullable="false" />
+          <Property Name="AllowArrears" Type="bit" Nullable="false" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuoteExpression">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Name="Guid" Type="varchar" Nullable="false" MaxLength="36" />
+          <Property Name="SrcID" Type="varchar" Nullable="false" MaxLength="36" />
+          <Property Name="Condition" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Expression" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="SortID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuoteMain">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Name="Guid" Type="varchar" Nullable="false" MaxLength="36" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FeeType" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="LogisticsType" Type="varchar" MaxLength="20" />
+          <Property Name="DispatchType" Type="varchar" MaxLength="20" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuoteMainRelation">
+          <Key>
+            <PropertyRef Name="SrcID" />
+            <PropertyRef Name="Code" />
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Name="SrcID" Type="varchar" Nullable="false" MaxLength="36" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="StockGoods">
+          <Key>
+            <PropertyRef Name="Goods" />
+            <PropertyRef Name="OwnerSite" />
+          </Key>
+          <Property Name="Goods" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="OwnerSite" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Price" Type="decimal" Scale="2" />
+          <Property Name="Number" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StockGoodsProvide">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProvideDate" Type="datetime" Nullable="false" />
+          <Property Name="SrcSite" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="DestSite" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Goods" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Scale="2" />
+          <Property Name="Receiver" Type="varchar" MaxLength="20" />
+          <Property Name="Remark" Type="varchar" MaxLength="512" />
+          <Property Name="State" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StockGoodsRegister">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StockDate" Type="datetime" Nullable="false" />
+          <Property Name="Supplier" Type="varchar" MaxLength="20" />
+          <Property Name="Goods" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="OwnerSite" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Scale="2" />
+          <Property Name="Operator" Type="varchar" MaxLength="20" />
+          <Property Name="Remark" Type="varchar" MaxLength="512" />
+          <Property Name="ActionType" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StockWaybill">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="OwnerSite" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Price" Type="decimal" Scale="2" />
+          <Property Name="State" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="StockWaybillProvide">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProvideDate" Type="datetime" Nullable="false" />
+          <Property Name="SrcSite" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="DestSite" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="StartCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="EndCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Scale="2" />
+          <Property Name="Receiver" Type="varchar" MaxLength="20" />
+          <Property Name="Remark" Type="varchar" MaxLength="512" />
+          <Property Name="State" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StockWaybillRegister">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StockDate" Type="datetime" Nullable="false" />
+          <Property Name="Supplier" Type="varchar" MaxLength="20" />
+          <Property Name="OwnerSite" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="StartCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="EndCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Scale="2" />
+          <Property Name="Operator" Type="varchar" MaxLength="20" />
+          <Property Name="Remark" Type="nchar" MaxLength="10" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SysFunction">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ParentCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ControlType" Type="varchar" MaxLength="200" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="QueryFlag" Type="bit" />
+          <Property Name="InsertFlag" Type="bit" />
+          <Property Name="UpdateFlag" Type="bit" />
+          <Property Name="DeleteFlag" Type="bit" />
+          <Property Name="SaveFlag" Type="bit" />
+          <Property Name="PrintFlag" Type="bit" />
+          <Property Name="ImportFlag" Type="bit" />
+          <Property Name="ExportFlag" Type="bit" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SysOperationLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OperatorUserName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MacAddress" Type="varchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="50" />
+          <Property Name="OperationID" Type="varchar" MaxLength="50" />
+          <Property Name="OperationTime" Type="datetime" Nullable="false" />
+          <Property Name="OperationType" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Details" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SysParameter">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ParentCode" Type="varchar" MaxLength="20" />
+          <Property Name="DisplayName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FullName" Type="varchar" MaxLength="200" />
+          <Property Name="QueryWord" Type="varchar" MaxLength="20" />
+          <Property Name="Mark1" Type="varchar" MaxLength="50" />
+          <Property Name="Mark2" Type="varchar" MaxLength="50" />
+          <Property Name="Mark3" Type="varchar" MaxLength="50" />
+          <Property Name="Remark" Type="varchar" MaxLength="512" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SysParameterType">
+          <Key>
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TreeFlag" Type="bit" Nullable="false" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SysRole">
+          <Key>
+            <PropertyRef Name="RoleCode" />
+          </Key>
+          <Property Name="RoleCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoleName" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SysRoleFunction">
+          <Key>
+            <PropertyRef Name="RoleCode" />
+            <PropertyRef Name="FunctionCode" />
+          </Key>
+          <Property Name="RoleCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FunctionCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="QueryFlag" Type="bit" Nullable="false" />
+          <Property Name="InsertFlag" Type="bit" Nullable="false" />
+          <Property Name="UpdateFlag" Type="bit" Nullable="false" />
+          <Property Name="DeleteFlag" Type="bit" Nullable="false" />
+          <Property Name="SaveFlag" Type="bit" Nullable="false" />
+          <Property Name="PrintFlag" Type="bit" Nullable="false" />
+          <Property Name="ImportFlag" Type="bit" Nullable="false" />
+          <Property Name="ExportFlag" Type="bit" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SysUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="RoleCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="IsLock" Type="bit" Nullable="false" />
+          <Property Name="IsAdmin" Type="bit" Nullable="false" />
+          <Property Name="CheckComputer" Type="bit" Nullable="false" />
+          <Property Name="ComputerCode" Type="varchar" MaxLength="255" />
+          <Property Name="Remark" Type="varchar" MaxLength="512" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SysUserFunction">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="FunctionCode" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="FunctionCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="QueryFlag" Type="bit" Nullable="false" />
+          <Property Name="InsertFlag" Type="bit" Nullable="false" />
+          <Property Name="UpdateFlag" Type="bit" Nullable="false" />
+          <Property Name="DeleteFlag" Type="bit" Nullable="false" />
+          <Property Name="SaveFlag" Type="bit" Nullable="false" />
+          <Property Name="PrintFlag" Type="bit" Nullable="false" />
+          <Property Name="ImportFlag" Type="bit" Nullable="false" />
+          <Property Name="ExportFlag" Type="bit" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SysUserLoginLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="IPAddress" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MacAddress" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="HostName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="LoginTime" Type="datetime" Nullable="false" />
+          <Property Name="LoginState" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="SysVersion">
+          <Key>
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Version" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WaybillGoods">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="WaybillCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Goods" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Pack" Type="varchar" MaxLength="20" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="Volume" Type="decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="Weight" Type="decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="RealWeight" Type="decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="Arbitariec" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="DispatchFee" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="Valid" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WaybillInfo">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CustomersType" Type="varchar" MaxLength="20" />
+          <Property Name="LogisticsType" Type="varchar" MaxLength="20" />
+          <Property Name="DispatchType" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SettlementType" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Consignor" Type="int" Nullable="false" />
+          <Property Name="ConsignorSite" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ConsignorLinkMan" Type="varchar" MaxLength="20" />
+          <Property Name="ConsignorTel" Type="varchar" MaxLength="20" />
+          <Property Name="ConsignorPhone" Type="varchar" MaxLength="20" />
+          <Property Name="ConsignorAddress" Type="varchar" MaxLength="255" />
+          <Property Name="ServiceEmployee" Type="int" />
+          <Property Name="SalesmanEmployee" Type="int" />
+          <Property Name="Destination" Type="int" Nullable="false" />
+          <Property Name="DestinationSite" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Consignee" Type="nchar" MaxLength="10" />
+          <Property Name="ConsigneeLinkMan" Type="varchar" MaxLength="20" />
+          <Property Name="ConsigneeTel" Type="varchar" MaxLength="20" />
+          <Property Name="ConsigneeAddress" Type="varchar" MaxLength="255" />
+          <Property Name="StorageFee" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="ReceiptFee" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="RemoteFee" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="OtherFee" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="TakeTheirFee" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="PickUpGoodsFee" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="DeliveryRMBFee" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="DeliveryHKDFee" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="CustomsDlearanceFee" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="AdditionalPage" Type="int" Nullable="false" />
+          <Property Name="AdditionalPageFee" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="ReceivableAmount" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="PaidAmount" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="ProtocolNo" Type="varchar" MaxLength="50" />
+          <Property Name="PaymentFlag" Type="bit" Nullable="false" />
+          <Property Name="DispatchUnifiedNum" Type="varchar" MaxLength="20" />
+          <Property Name="DispatchAttachment" Type="varchar" MaxLength="50" />
+          <Property Name="DispatchEntrancePermit" Type="varchar" MaxLength="20" />
+          <Property Name="DispatchReceiptAddress" Type="varchar" MaxLength="100" />
+          <Property Name="ReceiptFlag" Type="bit" Nullable="false" />
+          <Property Name="ReceiptCode" Type="varchar" MaxLength="20" />
+          <Property Name="Remark" Type="varchar" MaxLength="200" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LDLLogisticsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="LDLLogisticsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CoDepartment" EntityType="LDLLogisticsModel.CoDepartment" />
+          <EntitySet Name="CoDriver" EntityType="LDLLogisticsModel.CoDriver" />
+          <EntitySet Name="CoSite" EntityType="LDLLogisticsModel.CoSite" />
+          <EntitySet Name="QuoteExpression" EntityType="LDLLogisticsModel.QuoteExpression" />
+          <EntitySet Name="QuoteMain" EntityType="LDLLogisticsModel.QuoteMain" />
+          <EntitySet Name="QuoteMainRelation" EntityType="LDLLogisticsModel.QuoteMainRelation" />
+          <EntitySet Name="StockGoods" EntityType="LDLLogisticsModel.StockGoods" />
+          <EntitySet Name="StockGoodsProvide" EntityType="LDLLogisticsModel.StockGoodsProvide" />
+          <EntitySet Name="StockGoodsRegister" EntityType="LDLLogisticsModel.StockGoodsRegister" />
+          <EntitySet Name="StockWaybill" EntityType="LDLLogisticsModel.StockWaybill" />
+          <EntitySet Name="StockWaybillProvide" EntityType="LDLLogisticsModel.StockWaybillProvide" />
+          <EntitySet Name="StockWaybillRegister" EntityType="LDLLogisticsModel.StockWaybillRegister" />
+          <EntitySet Name="SysFunction" EntityType="LDLLogisticsModel.SysFunction" />
+          <EntitySet Name="SysOperationLog" EntityType="LDLLogisticsModel.SysOperationLog" />
+          <EntitySet Name="SysRole" EntityType="LDLLogisticsModel.SysRole" />
+          <EntitySet Name="SysRoleFunction" EntityType="LDLLogisticsModel.SysRoleFunction" />
+          <EntitySet Name="SysUserFunction" EntityType="LDLLogisticsModel.SysUserFunction" />
+          <EntitySet Name="SysUserLoginLog" EntityType="LDLLogisticsModel.SysUserLoginLog" />
+          <EntitySet Name="SysVersion" EntityType="LDLLogisticsModel.SysVersion" />
+          <EntitySet Name="WaybillGoods" EntityType="LDLLogisticsModel.WaybillGoods" />
+          <EntitySet Name="SysUser" EntityType="LDLLogisticsModel.SysUser" />
+          <EntitySet Name="CoCar" EntityType="LDLLogisticsModel.CoCar" />
+          <EntitySet Name="SysParameterType" EntityType="LDLLogisticsModel.SysParameterType" />
+          <EntitySet Name="SysParameter" EntityType="LDLLogisticsModel.SysParameter" />
+          <EntitySet Name="CoCustomers" EntityType="LDLLogisticsModel.CoCustomers" />
+          <EntitySet Name="CoEmployee" EntityType="LDLLogisticsModel.CoEmployee" />
+          <EntitySet Name="CoDestination" EntityType="LDLLogisticsModel.CoDestination" />
+          <EntitySet Name="WaybillInfo" EntityType="LDLLogisticsModel.WaybillInfo" />
+        </EntityContainer>
+        <EntityType Name="CoDepartment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ParentID" Nullable="false" />
+          <Property Type="String" Name="DeptCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DeptName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="OrderID" Nullable="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoDriver">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SiteID" />
+          <Property Type="String" Name="IDCard" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sex" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LicenseType" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="NativePlace" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoSite">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ParentID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Type" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Currency" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SendPlace" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Province" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Area" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="AllowArrivalPay" Nullable="false" />
+          <Property Type="Boolean" Name="AllowCollection" Nullable="false" />
+          <Property Type="Boolean" Name="AllowArrears" Nullable="false" />
+          <Property Type="Int32" Name="OrderID" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuoteExpression">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Type="String" Name="Guid" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SrcID" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Condition" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Expression" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SortID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuoteMain">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Type="String" Name="Guid" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FeeType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LogisticsType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DispatchType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuoteMainRelation">
+          <Key>
+            <PropertyRef Name="SrcID" />
+            <PropertyRef Name="Code" />
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Type="String" Name="SrcID" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Type" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="StockGoods">
+          <Key>
+            <PropertyRef Name="Goods" />
+            <PropertyRef Name="OwnerSite" />
+          </Key>
+          <Property Type="String" Name="Goods" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OwnerSite" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Number" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StockGoodsProvide">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="ProvideDate" Nullable="false" />
+          <Property Type="String" Name="SrcSite" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DestSite" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Goods" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="String" Name="Receiver" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="State" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StockGoodsRegister">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="StockDate" Nullable="false" />
+          <Property Type="String" Name="Supplier" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Goods" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OwnerSite" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="String" Name="Operator" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ActionType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StockWaybill">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OwnerSite" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="String" Name="State" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Type" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="StockWaybillProvide">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="ProvideDate" Nullable="false" />
+          <Property Type="String" Name="SrcSite" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DestSite" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StartCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EndCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="String" Name="Receiver" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="State" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StockWaybillRegister">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="StockDate" Nullable="false" />
+          <Property Type="String" Name="Supplier" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OwnerSite" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StartCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EndCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="String" Name="Operator" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SysFunction">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ParentCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ControlType" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="OrderID" Nullable="false" />
+          <Property Type="Boolean" Name="QueryFlag" />
+          <Property Type="Boolean" Name="InsertFlag" />
+          <Property Type="Boolean" Name="UpdateFlag" />
+          <Property Type="Boolean" Name="DeleteFlag" />
+          <Property Type="Boolean" Name="SaveFlag" />
+          <Property Type="Boolean" Name="PrintFlag" />
+          <Property Type="Boolean" Name="ImportFlag" />
+          <Property Type="Boolean" Name="ExportFlag" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SysOperationLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="OperatorUserName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MacAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IPAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OperationID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="OperationTime" Nullable="false" />
+          <Property Type="String" Name="OperationType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Details" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SysRole">
+          <Key>
+            <PropertyRef Name="RoleCode" />
+          </Key>
+          <Property Type="String" Name="RoleCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RoleName" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyDate" />
+        </EntityType>
+        <EntityType Name="SysRoleFunction">
+          <Key>
+            <PropertyRef Name="RoleCode" />
+            <PropertyRef Name="FunctionCode" />
+          </Key>
+          <Property Type="String" Name="RoleCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FunctionCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="QueryFlag" Nullable="false" />
+          <Property Type="Boolean" Name="InsertFlag" Nullable="false" />
+          <Property Type="Boolean" Name="UpdateFlag" Nullable="false" />
+          <Property Type="Boolean" Name="DeleteFlag" Nullable="false" />
+          <Property Type="Boolean" Name="SaveFlag" Nullable="false" />
+          <Property Type="Boolean" Name="PrintFlag" Nullable="false" />
+          <Property Type="Boolean" Name="ImportFlag" Nullable="false" />
+          <Property Type="Boolean" Name="ExportFlag" Nullable="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" />
+        </EntityType>
+        <EntityType Name="SysUserFunction">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="FunctionCode" />
+          </Key>
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="String" Name="FunctionCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="QueryFlag" Nullable="false" />
+          <Property Type="Boolean" Name="InsertFlag" Nullable="false" />
+          <Property Type="Boolean" Name="UpdateFlag" Nullable="false" />
+          <Property Type="Boolean" Name="DeleteFlag" Nullable="false" />
+          <Property Type="Boolean" Name="SaveFlag" Nullable="false" />
+          <Property Type="Boolean" Name="PrintFlag" Nullable="false" />
+          <Property Type="Boolean" Name="ImportFlag" Nullable="false" />
+          <Property Type="Boolean" Name="ExportFlag" Nullable="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" />
+        </EntityType>
+        <EntityType Name="SysUserLoginLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IPAddress" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MacAddress" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HostName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LoginTime" Nullable="false" />
+          <Property Type="String" Name="LoginState" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SysVersion">
+          <Key>
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Type="String" Name="Type" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Version" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WaybillGoods">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="WaybillCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Goods" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pack" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" />
+          <Property Type="Decimal" Name="Volume" Nullable="false" Precision="8" Scale="2" />
+          <Property Type="Decimal" Name="Weight" Nullable="false" Precision="8" Scale="2" />
+          <Property Type="Decimal" Name="RealWeight" Nullable="false" Precision="8" Scale="2" />
+          <Property Type="Decimal" Name="Arbitariec" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="DispatchFee" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SysUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="EmployeeID" />
+          <Property Type="String" Name="RoleCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsLock" Nullable="false" />
+          <Property Type="Boolean" Name="IsAdmin" Nullable="false" />
+          <Property Type="Boolean" Name="CheckComputer" Nullable="false" />
+          <Property Type="String" Name="ComputerCode" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoCar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LicenseNumber" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SiteCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Driver" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CarType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OwnType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OperationNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SysParameterType">
+          <Key>
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Type="String" Name="Type" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="TreeFlag" Nullable="false" />
+          <Property Type="Int32" Name="OrderID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SysParameter">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Type" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ParentCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FullName" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="QueryWord" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mark1" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mark2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mark3" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="OrderID" Nullable="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoCustomers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="QueryWork" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SiteID" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LinkMan1" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LinkMan2" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tel1" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tel2" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone1" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone2" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fax" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="QQ" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MSN" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mail" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SendPlace" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SettlementType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomersType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ServiceEmployeeID" />
+          <Property Type="String" Name="ServiceEmployeeName" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayeeName" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayeePhone" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BankName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BankAccount" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TransferNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsTransfer" Nullable="false" />
+          <Property Type="Boolean" Name="IsSMS" Nullable="false" />
+          <Property Type="Boolean" Name="IsPrepaid" Nullable="false" />
+          <Property Type="Boolean" Name="IsSpecial" Nullable="false" />
+          <Property Type="String" Name="Remark" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoEmployee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="QueryWord" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="DeptID" Nullable="false" />
+          <Property Type="String" Name="SiteID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Superior" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BarPassword" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoDestination">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SiteID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyDate" />
+          <Property Type="Boolean" Name="Valid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WaybillInfo">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomersType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LogisticsType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DispatchType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SettlementType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Consignor" Nullable="false" />
+          <Property Type="String" Name="ConsignorSite" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ConsignorLinkMan" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ConsignorTel" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ConsignorPhone" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ConsignorAddress" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ServiceEmployee" />
+          <Property Type="Int32" Name="SalesmanEmployee" />
+          <Property Type="Int32" Name="Destination" Nullable="false" />
+          <Property Type="String" Name="DestinationSite" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Consignee" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="ConsigneeLinkMan" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ConsigneeTel" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ConsigneeAddress" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="StorageFee" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ReceiptFee" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="RemoteFee" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OtherFee" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="TakeTheirFee" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="PickUpGoodsFee" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="DeliveryRMBFee" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="DeliveryHKDFee" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="CustomsDlearanceFee" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="AdditionalPage" Nullable="false" />
+          <Property Type="Decimal" Name="AdditionalPageFee" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ReceivableAmount" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="PaidAmount" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="ProtocolNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="PaymentFlag" Nullable="false" />
+          <Property Type="String" Name="DispatchUnifiedNum" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DispatchAttachment" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DispatchEntrancePermit" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DispatchReceiptAddress" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="ReceiptFlag" Nullable="false" />
+          <Property Type="String" Name="ReceiptCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LDLLogisticsModelStoreContainer" CdmEntityContainer="LDLLogisticsEntities">
+          <EntitySetMapping Name="CoDepartment">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.CoDepartment">
+              <MappingFragment StoreEntitySet="CoDepartment">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+                <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoDriver">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.CoDriver">
+              <MappingFragment StoreEntitySet="CoDriver">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
+                <ScalarProperty Name="LicenseType" ColumnName="LicenseType" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoSite">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.CoSite">
+              <MappingFragment StoreEntitySet="CoSite">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="AllowArrears" ColumnName="AllowArrears" />
+                <ScalarProperty Name="AllowCollection" ColumnName="AllowCollection" />
+                <ScalarProperty Name="AllowArrivalPay" ColumnName="AllowArrivalPay" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="SendPlace" ColumnName="SendPlace" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuoteExpression">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.QuoteExpression">
+              <MappingFragment StoreEntitySet="QuoteExpression">
+                <ScalarProperty Name="SortID" ColumnName="SortID" />
+                <ScalarProperty Name="Expression" ColumnName="Expression" />
+                <ScalarProperty Name="Condition" ColumnName="Condition" />
+                <ScalarProperty Name="SrcID" ColumnName="SrcID" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuoteMain">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.QuoteMain">
+              <MappingFragment StoreEntitySet="QuoteMain">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="DispatchType" ColumnName="DispatchType" />
+                <ScalarProperty Name="LogisticsType" ColumnName="LogisticsType" />
+                <ScalarProperty Name="FeeType" ColumnName="FeeType" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuoteMainRelation">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.QuoteMainRelation">
+              <MappingFragment StoreEntitySet="QuoteMainRelation">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="SrcID" ColumnName="SrcID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockGoods">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.StockGoods">
+              <MappingFragment StoreEntitySet="StockGoods">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="OwnerSite" ColumnName="OwnerSite" />
+                <ScalarProperty Name="Goods" ColumnName="Goods" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockGoodsProvide">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.StockGoodsProvide">
+              <MappingFragment StoreEntitySet="StockGoodsProvide">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Goods" ColumnName="Goods" />
+                <ScalarProperty Name="DestSite" ColumnName="DestSite" />
+                <ScalarProperty Name="SrcSite" ColumnName="SrcSite" />
+                <ScalarProperty Name="ProvideDate" ColumnName="ProvideDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockGoodsRegister">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.StockGoodsRegister">
+              <MappingFragment StoreEntitySet="StockGoodsRegister">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ActionType" ColumnName="ActionType" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="OwnerSite" ColumnName="OwnerSite" />
+                <ScalarProperty Name="Goods" ColumnName="Goods" />
+                <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+                <ScalarProperty Name="StockDate" ColumnName="StockDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockWaybill">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.StockWaybill">
+              <MappingFragment StoreEntitySet="StockWaybill">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="OwnerSite" ColumnName="OwnerSite" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockWaybillProvide">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.StockWaybillProvide">
+              <MappingFragment StoreEntitySet="StockWaybillProvide">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="EndCode" ColumnName="EndCode" />
+                <ScalarProperty Name="StartCode" ColumnName="StartCode" />
+                <ScalarProperty Name="DestSite" ColumnName="DestSite" />
+                <ScalarProperty Name="SrcSite" ColumnName="SrcSite" />
+                <ScalarProperty Name="ProvideDate" ColumnName="ProvideDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockWaybillRegister">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.StockWaybillRegister">
+              <MappingFragment StoreEntitySet="StockWaybillRegister">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="EndCode" ColumnName="EndCode" />
+                <ScalarProperty Name="StartCode" ColumnName="StartCode" />
+                <ScalarProperty Name="OwnerSite" ColumnName="OwnerSite" />
+                <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+                <ScalarProperty Name="StockDate" ColumnName="StockDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysFunction">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.SysFunction">
+              <MappingFragment StoreEntitySet="SysFunction">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="ExportFlag" ColumnName="ExportFlag" />
+                <ScalarProperty Name="ImportFlag" ColumnName="ImportFlag" />
+                <ScalarProperty Name="PrintFlag" ColumnName="PrintFlag" />
+                <ScalarProperty Name="SaveFlag" ColumnName="SaveFlag" />
+                <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+                <ScalarProperty Name="UpdateFlag" ColumnName="UpdateFlag" />
+                <ScalarProperty Name="InsertFlag" ColumnName="InsertFlag" />
+                <ScalarProperty Name="QueryFlag" ColumnName="QueryFlag" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ControlType" ColumnName="ControlType" />
+                <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysOperationLog">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.SysOperationLog">
+              <MappingFragment StoreEntitySet="SysOperationLog">
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="OperationType" ColumnName="OperationType" />
+                <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+                <ScalarProperty Name="OperationID" ColumnName="OperationID" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="MacAddress" ColumnName="MacAddress" />
+                <ScalarProperty Name="OperatorUserName" ColumnName="OperatorUserName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysRole">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.SysRole">
+              <MappingFragment StoreEntitySet="SysRole">
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysRoleFunction">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.SysRoleFunction">
+              <MappingFragment StoreEntitySet="SysRoleFunction">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ExportFlag" ColumnName="ExportFlag" />
+                <ScalarProperty Name="ImportFlag" ColumnName="ImportFlag" />
+                <ScalarProperty Name="PrintFlag" ColumnName="PrintFlag" />
+                <ScalarProperty Name="SaveFlag" ColumnName="SaveFlag" />
+                <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+                <ScalarProperty Name="UpdateFlag" ColumnName="UpdateFlag" />
+                <ScalarProperty Name="InsertFlag" ColumnName="InsertFlag" />
+                <ScalarProperty Name="QueryFlag" ColumnName="QueryFlag" />
+                <ScalarProperty Name="FunctionCode" ColumnName="FunctionCode" />
+                <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysUserFunction">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.SysUserFunction">
+              <MappingFragment StoreEntitySet="SysUserFunction">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ExportFlag" ColumnName="ExportFlag" />
+                <ScalarProperty Name="ImportFlag" ColumnName="ImportFlag" />
+                <ScalarProperty Name="PrintFlag" ColumnName="PrintFlag" />
+                <ScalarProperty Name="SaveFlag" ColumnName="SaveFlag" />
+                <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+                <ScalarProperty Name="UpdateFlag" ColumnName="UpdateFlag" />
+                <ScalarProperty Name="InsertFlag" ColumnName="InsertFlag" />
+                <ScalarProperty Name="QueryFlag" ColumnName="QueryFlag" />
+                <ScalarProperty Name="FunctionCode" ColumnName="FunctionCode" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysUserLoginLog">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.SysUserLoginLog">
+              <MappingFragment StoreEntitySet="SysUserLoginLog">
+                <ScalarProperty Name="LoginState" ColumnName="LoginState" />
+                <ScalarProperty Name="LoginTime" ColumnName="LoginTime" />
+                <ScalarProperty Name="HostName" ColumnName="HostName" />
+                <ScalarProperty Name="MacAddress" ColumnName="MacAddress" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysVersion">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.SysVersion">
+              <MappingFragment StoreEntitySet="SysVersion">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WaybillGoods">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.WaybillGoods">
+              <MappingFragment StoreEntitySet="WaybillGoods">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="DispatchFee" ColumnName="DispatchFee" />
+                <ScalarProperty Name="Arbitariec" ColumnName="Arbitariec" />
+                <ScalarProperty Name="RealWeight" ColumnName="RealWeight" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Pack" ColumnName="Pack" />
+                <ScalarProperty Name="Goods" ColumnName="Goods" />
+                <ScalarProperty Name="WaybillCode" ColumnName="WaybillCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysUser">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.SysUser">
+              <MappingFragment StoreEntitySet="SysUser">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ComputerCode" ColumnName="ComputerCode" />
+                <ScalarProperty Name="CheckComputer" ColumnName="CheckComputer" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+                <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoCar">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.CoCar">
+              <MappingFragment StoreEntitySet="CoCar">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="OperationNO" ColumnName="OperationNO" />
+                <ScalarProperty Name="OwnType" ColumnName="OwnType" />
+                <ScalarProperty Name="CarType" ColumnName="CarType" />
+                <ScalarProperty Name="Driver" ColumnName="Driver" />
+                <ScalarProperty Name="SiteCode" ColumnName="SiteCode" />
+                <ScalarProperty Name="LicenseNumber" ColumnName="LicenseNumber" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysParameterType">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.SysParameterType">
+              <MappingFragment StoreEntitySet="SysParameterType">
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="TreeFlag" ColumnName="TreeFlag" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysParameter">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.SysParameter">
+              <MappingFragment StoreEntitySet="SysParameter">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Mark3" ColumnName="Mark3" />
+                <ScalarProperty Name="Mark2" ColumnName="Mark2" />
+                <ScalarProperty Name="Mark1" ColumnName="Mark1" />
+                <ScalarProperty Name="QueryWord" ColumnName="QueryWord" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoCustomers">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.CoCustomers">
+              <MappingFragment StoreEntitySet="CoCustomers">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="IsSpecial" ColumnName="IsSpecial" />
+                <ScalarProperty Name="IsPrepaid" ColumnName="IsPrepaid" />
+                <ScalarProperty Name="IsSMS" ColumnName="IsSMS" />
+                <ScalarProperty Name="IsTransfer" ColumnName="IsTransfer" />
+                <ScalarProperty Name="TransferNO" ColumnName="TransferNO" />
+                <ScalarProperty Name="BankAccount" ColumnName="BankAccount" />
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+                <ScalarProperty Name="PayeePhone" ColumnName="PayeePhone" />
+                <ScalarProperty Name="PayeeName" ColumnName="PayeeName" />
+                <ScalarProperty Name="ServiceEmployeeName" ColumnName="ServiceEmployeeName" />
+                <ScalarProperty Name="ServiceEmployeeID" ColumnName="ServiceEmployeeID" />
+                <ScalarProperty Name="CustomersType" ColumnName="CustomersType" />
+                <ScalarProperty Name="SettlementType" ColumnName="SettlementType" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="SendPlace" ColumnName="SendPlace" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="MSN" ColumnName="MSN" />
+                <ScalarProperty Name="QQ" ColumnName="QQ" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+                <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+                <ScalarProperty Name="LinkMan2" ColumnName="LinkMan2" />
+                <ScalarProperty Name="LinkMan1" ColumnName="LinkMan1" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="QueryWork" ColumnName="QueryWork" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoEmployee">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.CoEmployee">
+              <MappingFragment StoreEntitySet="CoEmployee">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="BarPassword" ColumnName="BarPassword" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Superior" ColumnName="Superior" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+                <ScalarProperty Name="QueryWord" ColumnName="QueryWord" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoDestination">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.CoDestination">
+              <MappingFragment StoreEntitySet="CoDestination">
+                <ScalarProperty Name="Valid" ColumnName="Valid" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WaybillInfo">
+            <EntityTypeMapping TypeName="LDLLogisticsModel.WaybillInfo">
+              <MappingFragment StoreEntitySet="WaybillInfo">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ReceiptCode" ColumnName="ReceiptCode" />
+                <ScalarProperty Name="ReceiptFlag" ColumnName="ReceiptFlag" />
+                <ScalarProperty Name="DispatchReceiptAddress" ColumnName="DispatchReceiptAddress" />
+                <ScalarProperty Name="DispatchEntrancePermit" ColumnName="DispatchEntrancePermit" />
+                <ScalarProperty Name="DispatchAttachment" ColumnName="DispatchAttachment" />
+                <ScalarProperty Name="DispatchUnifiedNum" ColumnName="DispatchUnifiedNum" />
+                <ScalarProperty Name="PaymentFlag" ColumnName="PaymentFlag" />
+                <ScalarProperty Name="ProtocolNo" ColumnName="ProtocolNo" />
+                <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+                <ScalarProperty Name="ReceivableAmount" ColumnName="ReceivableAmount" />
+                <ScalarProperty Name="AdditionalPageFee" ColumnName="AdditionalPageFee" />
+                <ScalarProperty Name="AdditionalPage" ColumnName="AdditionalPage" />
+                <ScalarProperty Name="CustomsDlearanceFee" ColumnName="CustomsDlearanceFee" />
+                <ScalarProperty Name="DeliveryHKDFee" ColumnName="DeliveryHKDFee" />
+                <ScalarProperty Name="DeliveryRMBFee" ColumnName="DeliveryRMBFee" />
+                <ScalarProperty Name="PickUpGoodsFee" ColumnName="PickUpGoodsFee" />
+                <ScalarProperty Name="TakeTheirFee" ColumnName="TakeTheirFee" />
+                <ScalarProperty Name="OtherFee" ColumnName="OtherFee" />
+                <ScalarProperty Name="RemoteFee" ColumnName="RemoteFee" />
+                <ScalarProperty Name="ReceiptFee" ColumnName="ReceiptFee" />
+                <ScalarProperty Name="StorageFee" ColumnName="StorageFee" />
+                <ScalarProperty Name="ConsigneeAddress" ColumnName="ConsigneeAddress" />
+                <ScalarProperty Name="ConsigneeTel" ColumnName="ConsigneeTel" />
+                <ScalarProperty Name="ConsigneeLinkMan" ColumnName="ConsigneeLinkMan" />
+                <ScalarProperty Name="Consignee" ColumnName="Consignee" />
+                <ScalarProperty Name="DestinationSite" ColumnName="DestinationSite" />
+                <ScalarProperty Name="Destination" ColumnName="Destination" />
+                <ScalarProperty Name="SalesmanEmployee" ColumnName="SalesmanEmployee" />
+                <ScalarProperty Name="ServiceEmployee" ColumnName="ServiceEmployee" />
+                <ScalarProperty Name="ConsignorAddress" ColumnName="ConsignorAddress" />
+                <ScalarProperty Name="ConsignorPhone" ColumnName="ConsignorPhone" />
+                <ScalarProperty Name="ConsignorTel" ColumnName="ConsignorTel" />
+                <ScalarProperty Name="ConsignorLinkMan" ColumnName="ConsignorLinkMan" />
+                <ScalarProperty Name="ConsignorSite" ColumnName="ConsignorSite" />
+                <ScalarProperty Name="Consignor" ColumnName="Consignor" />
+                <ScalarProperty Name="SettlementType" ColumnName="SettlementType" />
+                <ScalarProperty Name="DispatchType" ColumnName="DispatchType" />
+                <ScalarProperty Name="LogisticsType" ColumnName="LogisticsType" />
+                <ScalarProperty Name="CustomersType" ColumnName="CustomersType" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="LDLLogisticsModel" ZoomLevel="96" ShowGrid="true">
+        <EntityTypeShape EntityType="LDLLogisticsModel.CoDepartment" Width="1.5" PointX="0.5" PointY="1.125" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.CoDriver" Width="1.5" PointX="2.25" PointY="0.5" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.CoSite" Width="1.5" PointX="2.25" PointY="1.125" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.QuoteExpression" Width="1.5" PointX="0.5" PointY="4" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.QuoteMain" Width="1.5" PointX="0.5" PointY="5.25" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.QuoteMainRelation" Width="1.5" PointX="0.5" PointY="4.625" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.StockGoods" Width="1.5" PointX="4.25" PointY="3" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.StockGoodsProvide" Width="1.5" PointX="4.25" PointY="0.5" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.StockGoodsRegister" Width="1.5" PointX="4.25" PointY="2.375" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.StockWaybill" Width="1.5" PointX="4.25" PointY="1.75" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.StockWaybillProvide" Width="1.5" PointX="4.25" PointY="3.625" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.StockWaybillRegister" Width="1.5" PointX="4.25" PointY="1.125" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.SysFunction" Width="1.5" PointX="6.25" PointY="1.125" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.SysOperationLog" Width="1.5" PointX="8.125" PointY="1.125" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.SysRole" Width="1.5" PointX="8.125" PointY="2.375" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.SysRoleFunction" Width="1.5" PointX="6.25" PointY="2.375" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.SysUserFunction" Width="1.5" PointX="8.125" PointY="0.5" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.SysUserLoginLog" Width="1.5" PointX="6.25" PointY="3" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.SysVersion" Width="1.5" PointX="8.125" PointY="1.75" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.WaybillGoods" Width="1.5" PointX="2.25" PointY="4.625" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.SysUser" Width="1.5" PointX="6.25" PointY="0.5" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.CoCar" Width="1.5" PointX="0.5" PointY="2.375" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.SysParameterType" Width="1.5" PointX="8.125" PointY="3" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.SysParameter" Width="1.5" PointX="6.25" PointY="1.75" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.CoCustomers" Width="1.5" PointX="0.5" PointY="0.5" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.CoEmployee" Width="1.5" PointX="2.25" PointY="1.75" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.CoDestination" Width="1.5" PointX="0.5" PointY="1.75" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="LDLLogisticsModel.WaybillInfo" Width="1.5" PointX="2.25" PointY="4" Height="0.4" IsExpanded="false" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

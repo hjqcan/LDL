@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDL.Client", "LDL.Client\LDL.Client.csproj", "{B5230327-F906-4451-8262-5D638341D3AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDL.Utility", "LDL.Utility\LDL.Utility.csproj", "{D838EB7A-2C3F-4570-9E99-01FCFA565072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDLWCFService", "LDLWCFService\LDLWCFService.csproj", "{9D0E8DD9-B4A4-40A0-90E8-6F15AFC24F33}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LDL.Client\\LDL.Client.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = LDL.Client\\
+		SccProjectUniqueName2 = LDL.Utility\\LDL.Utility.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = LDL.Utility\\
+		SccProjectUniqueName3 = LDLWCFService\\LDLWCFService.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = LDLWCFService\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5230327-F906-4451-8262-5D638341D3AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5230327-F906-4451-8262-5D638341D3AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5230327-F906-4451-8262-5D638341D3AC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B5230327-F906-4451-8262-5D638341D3AC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B5230327-F906-4451-8262-5D638341D3AC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B5230327-F906-4451-8262-5D638341D3AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5230327-F906-4451-8262-5D638341D3AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5230327-F906-4451-8262-5D638341D3AC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B5230327-F906-4451-8262-5D638341D3AC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B5230327-F906-4451-8262-5D638341D3AC}.Release|x86.ActiveCfg = Release|Any CPU
+		{D838EB7A-2C3F-4570-9E99-01FCFA565072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D838EB7A-2C3F-4570-9E99-01FCFA565072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D838EB7A-2C3F-4570-9E99-01FCFA565072}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D838EB7A-2C3F-4570-9E99-01FCFA565072}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D838EB7A-2C3F-4570-9E99-01FCFA565072}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D838EB7A-2C3F-4570-9E99-01FCFA565072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D838EB7A-2C3F-4570-9E99-01FCFA565072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D838EB7A-2C3F-4570-9E99-01FCFA565072}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D838EB7A-2C3F-4570-9E99-01FCFA565072}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D838EB7A-2C3F-4570-9E99-01FCFA565072}.Release|x86.ActiveCfg = Release|Any CPU
+		{9D0E8DD9-B4A4-40A0-90E8-6F15AFC24F33}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9D0E8DD9-B4A4-40A0-90E8-6F15AFC24F33}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{9D0E8DD9-B4A4-40A0-90E8-6F15AFC24F33}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{9D0E8DD9-B4A4-40A0-90E8-6F15AFC24F33}.Debug|x86.ActiveCfg = Debug|x86
+		{9D0E8DD9-B4A4-40A0-90E8-6F15AFC24F33}.Debug|x86.Build.0 = Debug|x86
+		{9D0E8DD9-B4A4-40A0-90E8-6F15AFC24F33}.Release|Any CPU.ActiveCfg = Release|x86
+		{9D0E8DD9-B4A4-40A0-90E8-6F15AFC24F33}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{9D0E8DD9-B4A4-40A0-90E8-6F15AFC24F33}.Release|Mixed Platforms.Build.0 = Release|x86
+		{9D0E8DD9-B4A4-40A0-90E8-6F15AFC24F33}.Release|x86.ActiveCfg = Release|x86
+		{9D0E8DD9-B4A4-40A0-90E8-6F15AFC24F33}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
